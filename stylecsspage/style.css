@@ -1,0 +1,54 @@
+/* ------------------------------ sem classs */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    
+}
+
+.ss{
+    background-color: #F6F4F0;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ------------------------------ sem classs  end*/
+
+main {
+    flex-direction: column;
+    margin: 5% 0px ;
+}
+.stetnaes{
+    width: 450px;
+    height: 114px;
+    background-color:#35BD3A;
+    border-radius: 10px;
+    box-shadow:6px 4px 0px 3px #01AB08;
+    margin-top: 3%;
+}
+.hisscrs{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 6%;
+}
+.stetnaes h2{
+    font-size: 2.6rem;
+    color: white;
+}
+footer p{
+    position: absolute;
+    bottom: 6%;
+}

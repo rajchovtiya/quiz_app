@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../Quiz Timegames/../stylecsspage/style.css">
+
+    <link rel="stylesheet" href="../Quiz Timegames/../stylecsspage/totlstyle.css">
+</head>
+
+<body>
+    <main>
+        <a href="../Quiz Timegames/../htmlpage/quizgame.html">
+            <img src="file:///C:/Users/nemis/Downloads/Group%204%20(1).svg" alt="" class="scroimg">
+        </a>
+        <p class="pergafs">Result</p>
+        <div class="pogresbars">
+
+            <div class="pogrsscors">
+
+                <div class="bods left"></div>
+                <div class="minbox smlbox1">
+                    <p class="taka"></p>
+                </div>
+            </div>
+
+            <div class="bods rght"></div>
+            <div class="minbox smbox2">
+                <p class="los"></p>
+            </div>
+
+        </div>
+        <h2 class="contnshedig"><span class="totlsurs">00</span>/25</h2>
+        <p class="contensjesn"></p>
+        <a href="../Quiz Timegames/../htmlpage/Quizime25.html">
+            <button class="firchstst"> <<< Retry</button>
+        </a>
+    </main>
+
+    <script>
+        const los = document.querySelector(".los")
+        const takad = document.querySelector(".taka")
+        const pogrsscors = document.querySelector(".pogrsscors")
+        const totlsurs = document.querySelector(".totlsurs");
+        let stos = localStorage.getItem("scros")
+
+        totlsurs.innerText = stos
+        let taks = Number(stos)
+        let numberwits = taks * 100 / 25;
+
+        function strovrlyus() {
+            takad.innerText = numberwits + `%`
+            pogrsscors.style.width = `${numberwits}%`;
+            los.innerText = `${100 - numberwits}%`
+        }
+        strovrlyus()
+        function texts(){
+            const contensjesn=document.querySelector(".contensjesn")
+            if(numberwits>80 && numberwits<100){
+                contensjesn.innerText=`“keep learning, you have a very good score`
+            } else if(numberwits>55 && numberwits<80){
+                contensjesn.innerText=`“Keep learning, you have a good score”`
+            }else if(numberwits>40 && numberwits<55){
+                contensjesn.innerText=`“keep learning, you have a minimum score`
+            }else if(numberwits>20 && numberwits<40){
+                contensjesn.innerText=`“keep learning, you have an average  score”`
+            } else{
+                contensjesn.innerText=`“keep learning, you have a bad  score`
+            }
+        }
+        texts()
+    </script>
+
+</body>
+
+</html>
