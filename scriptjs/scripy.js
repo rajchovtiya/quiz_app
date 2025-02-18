@@ -7,9 +7,9 @@ const timerDisplay = document.querySelector('.timss');
 const opsmain=document.querySelector(".opsmain")
 const qusens2 = document.querySelector(".qusenboxs")
 
-for (currCode in quiz) {
-console.log(currCode)
-}
+// for (currCode in quiz) {
+// console.log(currCode)
+// }
 let countdown;
 let timeRemaining = 30;
 
@@ -79,6 +79,7 @@ function songs() {
 
     }
 }
+
 
 let itms = localStorage.getItem("opsns")
 let siroson = bjsk = JSON.parse(itms)
