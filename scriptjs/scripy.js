@@ -1,10 +1,10 @@
-    let seknd = document.querySelector(`.timss`)
+let seknd = document.querySelector(`.timss`)
 let bodys = document.querySelector(`.ss`)
 let timsbox = document.querySelector(`.swkeds`)
 let narxpage = document.querySelector(".nestpage")
 const startBtn = document.querySelector('.nestpage');
 const timerDisplay = document.querySelector('.timss');
-const opsmain=document.querySelector(".opsmain")
+const opsmain = document.querySelector(".opsmain")
 const qusens2 = document.querySelector(".qusenboxs")
 
 // for (currCode in quiz) {
@@ -31,16 +31,16 @@ function startTimer() {
             bodys.classList.remove("timscms")
             timsbox.classList.remove("grimcolors")
             timsbox.classList.remove("boxtimscolor")
-            opsmain.style.opacity=1;
-            qusens2.style.opacity=1
+            opsmain.style.opacity = 1;
+            qusens2.style.opacity = 1
 
         }
         else if (timeRemaining <= 15 && timeRemaining >= 10) {
             bodys.classList.add("grrns")
             timsbox.classList.add("grimcolors")
             timsbox.classList.remove("boxtimscolor")
-            opsmain.style.opacity=1;
-            qusens2.style.opacity=1
+            opsmain.style.opacity = 1;
+            qusens2.style.opacity = 1
         }
         else if (timeRemaining < 10 && timeRemaining > 0) {
             timerDisplay.textContent = `0${timeRemaining}`;
@@ -48,14 +48,14 @@ function startTimer() {
             bodys.classList.add("timscms")
             timsbox.classList.remove("grimcolors")
             timsbox.classList.add("boxtimscolor")
-            opsmain.style.opacity=1;
-            qusens2.style.opacity=1
+            opsmain.style.opacity = 1;
+            qusens2.style.opacity = 1
         }
         else {
             clearInterval(countdown);
             timerDisplay.textContent = `00`
-            opsmain.style.opacity=0.1;
-            qusens2.style.opacity=0.1
+            opsmain.style.opacity = 0.1;
+            qusens2.style.opacity = 0.1
         }
     }, 1000);
 }
@@ -123,7 +123,7 @@ function checkAnswer(selopsns, opsns) {
                 trfl.classList.add("truess")
             }
         })
-        opsns.style.opacity=0.1;
+        opsns.style.opacity = 0.1;
 
     }
 
@@ -132,10 +132,10 @@ function checkAnswer(selopsns, opsns) {
 const nestpage = document.querySelector(".nestpage").addEventListener("click", () => {
     if (currentQuestion < siroson.length - 1) {
         currentQuestion++;
+        secors++;
         qusentexts()
         skors()
         sckosbutons()
-        secors++;
     }
 })
 function skors() {
@@ -155,4 +155,4 @@ function sckosbutons() {
     }
 }
 qusentexts()
-    
+
